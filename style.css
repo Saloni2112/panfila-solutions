@@ -381,86 +381,59 @@
     padding-block: 30px;
     padding-bottom: 60px;
 }
-
-.class-section{
+.class-section {
     width: 100%;
-    height: auto;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 180px;
-   
+    box-sizing: border-box;
 }
-.class-section .class{
+
+.class-section .class {
     width: 80%;
-    height: 700px;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     border: 1px solid green;
     border-radius: 30px;
-    padding-inline: 15px;
-    
-  
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #000; /* Add a dark bg if needed */
+    flex-wrap: wrap; /* Allow wrapping if needed */
 }
-.class-section .class .CC{
-    width: 70%;
-    height: 600px;
-    padding-block: 20px;
-    padding-inline: 40px;
-   
-   
 
+.class-section .class .CC,
+.class-section .class .CC-medium {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
 }
-.class-section .class .CC img{
-    width: 30%;
+
+.class-section .class .CC img,
+.class-section .class .CC-medium img {
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
 }
-.class-section .class .CC h1{
-    font-size: 40px;
-    padding-block: 20px;
+
+.class-section .class .CC h1,
+.class-section .class .CC-medium h1 {
+    font-size: 32px;
+    padding-block: 10px;
     color: rgb(3, 184, 3);
 }
-.class-section .class .CC p{
-    font-size: 25px;
+
+.class-section .class .CC p,
+.class-section .class .CC-medium p {
+    font-size: 20px;
     color: white;
-    line-height: 35px;
-    padding-block: 20px;
+    line-height: 30px;
+    padding-block: 10px;
 }
 
-
-.class-section .medium{
-
-    width: 80%;
-    height: 700px;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    border-inline: 1px solid green;
-    padding-inline: 30px;
-}
-
-
-
-.class-section .class .CC-medium{
-    width: 70%;
-    height: 600px;
-    padding-block: 20px;
-
-}
-.class-section .class .CC-medium img{
-    width: 30%;
-}
-.class-section .class .CC-medium h1{
-    font-size: 40px;
-    padding-block: 20px;
-    color: rgb(3, 184, 3);
-}
-.class-section .class .CC-medium p{
-    font-size: 25px;
-    color: white;
-    line-height: 35px;
-    padding-block: 20px;
-}
 .HO{
     width: 100%;
     height: auto;
@@ -633,151 +606,91 @@
    font-size: 80px;
 }
 
-.shadow-section{
+.shadow-section {
     width: 100%;
-    height: auto;
+    padding: 60px 0 180px 0;
     display: flex;
-    align-items:center;
-    justify-content:center;
-    padding-bottom: 180px;
+    align-items: center;
+    justify-content: center;
+    background-color: #002600; /* Optional */
 }
-.shadow{
+
+.shadow {
     width: 90%;
-    height: 700px;
     display: flex;
-    align-items:center;
-    justify-content:space-around;
-    
-    border-radius: 30px;
-   
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-.shadow .SS{
-    width: 25%;
-    height: 600px;
-    border: 1px solid yellow;
+.shadow .SS,
+.shadow .SS-one,
+.shadow .SS-two {
+    width: 300px;
+    min-height: 600px;
     border-radius: 30px 30px 30px 80px;
-    padding-block: 40px;
-    padding-inline: 50px;
-    
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
-.SS img{
-    width: 80px;
+
+/* Border colors for each card */
+.shadow .SS { border: 1px solid yellow; }
+.shadow .SS-one { border: 1px solid red; }
+.shadow .SS-two { border: 1px solid green; }
+
+.SS p,
+.SS-one p,
+.SS-two p {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+.SS img,
+.SS-one img,
+.SS-two img {
+    width: 70px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.SS h4,
+.SS-one h4,
+.SS-two h4 {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.SS h5,
+.SS-one h5,
+.SS-two h5 {
+    font-size: 16px;
+    color: #c0c0c0;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.SS i,
+.SS-one i,
+.SS-two i {
+    font-size: 36px;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+/* Ensure icon stays inside */
+.SS i, .SS-one i, .SS-two i {
     padding-top: 10px;
-    display:inline;
-
 }
-.SS p{
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-}
-.SS h4{
-    display:inline;
-    font-size: 25px;
-    color: white;
-}
-.SS h5{
-    display:inline;
-    font-size: 20px;
-    color: rgb(185, 184, 184);
-    padding-left: 90px;
-}
-
-.SS i{
-    font-size: 40px;
-    color: yellow;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
-
-
-
-
-.shadow .SS-one{
-    width: 25%;
-    height: 600px;
-    border: 1px solid red;
-    border-radius: 30px 30px 30px 80px;
-    padding-block: 40px;
-    padding-inline: 50px;
-}
-.SS-one img{
-    width: 80px;
-    padding-top: 20px;
-    display:inline;
-
-}
-.SS-one p{
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-}
-.SS-one h4{
-    display:inline;
-    font-size: 25px;
-    color: white;
-}
-.SS-one h5{
-    display:inline;
-    font-size: 20px;
-    color: rgb(185, 184, 184);
-    padding-left: 90px;
-}
-
-.SS-one i{
-    font-size: 40px;
-    color: red;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    margin-top: 30px;
-}
-
-
-
-
-.shadow .SS-two{
-    width: 25%;
-    height: 600px;
-    border: 1px solid green;
-    border-radius: 30px 30px 30px 80px;
-    padding-block: 40px;
-    padding-inline: 50px;
-    
-}
-.SS-two img{
-    width: 80px;
-    padding-top: 20px;
-    display:inline;
-
-}
-.SS-two p{
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-}
-.SS-two h4{
-    display:inline;
-    font-size: 20px;
-    color: white;
-}
-.SS-two h5{
-    display:inline;
-    font-size: 20px;
-    color: rgb(185, 184, 184);
-    padding-left: 90px;
-}
-
-.SS-two i{
-    font-size: 40px;
-    color:green;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
-
 .HL{
     display: flex;
     align-items: center;
@@ -827,7 +740,7 @@
 }
 .footer-part{
     width: 100%;
-    height: 850px;
+    height: 550px;
     padding-inline: 20px;
     padding-block: 30px;
     display: flex;
@@ -836,12 +749,12 @@
     flex-direction: column;
 }
 .footer-part .part-one img{
-    width: 300px;
+    width: 200px;
     padding-inline: 30px;
 }
 
 .footer-part .part-two img{
-    width: 300px;
+    width: 200px;
     padding-block: 70px;
     padding-inline: 20px;
 }
@@ -865,35 +778,6 @@ hr{
 
 
 
-
-@media (max-width:768px) {
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    .main-container{
-        width: 100%;
-        height: auto;
-        background-color:rgb(1, 36, 1);
-    }
-
-    .nav{
-    width: 100%;
-    height: 140px;
-    background-color:rgb(1, 36, 1);
-}
-
-.nav img{
-    width: 33%;
-    height: 60%
-}
-.nav ul li{
-    display: none;
-}
-
     
 
     
-}
