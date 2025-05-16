@@ -9,67 +9,64 @@
     height: auto;
     background-color:rgb(1, 36, 1);
 }
-.nav{
-    width: 100%;
-    height: 140px;
-    background-color:rgb(1, 36, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 50px;
+.nav {
+  width: 100%;
+  background-color: rgb(1, 80, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
 }
-.nav img{
-    width: 18%;
-    height: 60%;
+
+.nav img {
+  width: clamp(120px, 30%, 250px);
+  height: auto;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu content initially hidden */
+.menu-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* Select Styling */
+.nav select {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  padding: 0.4rem;
+  background-color: transparent;
+ 
 
 }
 
-.nav ul li{
-    width: 100%;
-    height: 200px;
-    background-color:rgb(1, 36, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 40px;
-    
+#one,#two, #three, #four{
+  color: rgb(241, 206, 3);
+  border: none;
+ 
 }
-#one{
-    width:  20%;
-    height: auto;
- font-size: 40px;
- background-color:rgb(1, 36, 1);
- font-weight:800;
- color:rgb(241, 206, 3);
- border: none;
-}
-#two{
-    width: 15%;
-    height: auto;
- font-size: 40px;
- background-color:rgb(1, 36, 1);
- font-weight:800;
- color: white;
- border: none;
-}
-#three{
-    width:20%;
-    height: auto;
- font-size: 40px;
- background-color:rgb(1, 36, 1);
- font-weight:800;
- color: white;
- border: none;
-}
-#four{
-    width: 20%;
-    height: auto;
- font-size: 40px;
- background-color:rgb(1, 36, 1);
- font-weight:800;
- color: white;
- border: none;
-}
+ 
+
+
 .hero-section{
     width: 100%;
     height: 100%;
@@ -774,10 +771,418 @@ hr{
     font-size: 23px;
 }
 
+@media (max-width: 480px) {
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 
+    auto;
+    background-color: rgb(1, 36, 1);
+}
+
+/* Navbar */
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-content {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(1, 80, 1);
+    width: 100%;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-content {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav select {
+    width: 100%;
+    color: white;
+    background-color: rgb(1, 80, 1);
+    border: 1px solid white;
+  }
 
 
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero-section p {
+    color: orange;
+    margin-block: 20px;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+}
+
+.hero-section h1 span:first-child {
+    color: rgb(6, 182, 6);
+}
+
+.hero-section h1 span:last-child {
+    color: orange;
+}
+
+.hero-section h3 {
+    font-size: 30px;
+    color: white;
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.hero-section h3:hover {
+    color: orange;
+}
+
+.hero-section h3 i {
+    color: orange;
+    padding-right: 25px;
+}
+
+.hero-section button {
+    width: 50%;
+    height: 60px;
+    font-size: 20px;
+    background-color: rgb(52, 151, 52);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: rgb(74, 172, 74);
+}
+
+.hero-section button i {
+    padding-right: 15px;
+}
+
+/* Paragraph Section */
+.pera-section {
+    width: 100%;
+    height: auto;
+    background-color: rgb(1, 36, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.pera-section h5 {
+    font-size: 18px;
+    color: white;
+}
+
+.pera-section h1 {
+    font-size: 30px;
+    color: orange;
+    padding: 30px 0;
+}
+
+.pera-section p {
+    font-size: 20px;
+    color: white;
+    line-height: 35px;
+}
+
+/* Card Common Styles */
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgb(13, 99, 3) 0%, rgb(19, 85, 1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card .IM {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.card .IM img {
+    width: 70%;
+    border-radius: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: rgb(255, 217, 0);
+}
+
+.card p {
+    font-size: 15px;
+    color: white;
+    padding-top: 20px;
+}
+
+/* Card Sections */
+.card-section, .card-section-two, .card-section-three {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.card-section-two .card {
+    width: 700px;
+}
+
+.card-section-three .card {
+    width: 300px;
+}
+
+/* Card Button */
+.card-section-four {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 150px;
+}
+
+.card-section-four button {
+    width: 60%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    background-color: rgb(40, 161, 26);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-section-four button:hover {
+    width: 60%;
+    font-size: 20px;
+    background-color: orange;
+    color: black;
+}
+
+/* Heading Section */
+.HP {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.HP p {
+    font-size: 20px;
+    color: rgb(233, 153, 4);
+    margin-bottom: 20px;
+}
+
+.HP h1 {
+    font-size: 40px;
+    color: orange;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+/* Class Section */
+.class-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 180px;
+}
+
+.class {
+    width: 80%;
+    background-color: #000;
+    border: 1px solid green;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.class .CC, .class .CC-medium {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.class img {
+    width: 50%;
+    max-width: 200px;
+    margin: 0 auto 20px;
+}
+
+.class h1 {
+    font-size: 32px;
+    color: rgb(3, 184, 3);
+    margin: 10px 0;
+}
+
+.class p {
+    font-size: 10px;
+    color: white;
+    line-height: 30px;
+}
+
+/* Heading Orange */
+.HO {
+    width: 100%;
+    text-align: center;
+    /* margin: 60px 0; */
+}
+
+.HO h1 {
+    font-size: 40px;
+    color: orange;;
+}
+
+/* Service Section */
+.sarvice-section,
+.sarvice-section-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.SP-one, .SP-two, .SP-three {
+    width: 20%;
+    min-width: 250px;
+    height: 250px;
+    border-radius: 22px;
+    padding: 30px;
+    position: relative;
+    color: white;
+}
+
+.SP-one { background-color: rgb(4, 64, 22); }
+.SP-two { background-color: rgb(69, 29, 11); }
+.SP-three { background-color: rgb(56, 74, 13); }
+
+.SP-one .mini, .SP-two .mini, .SP-three .mini {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+    position: absolute;
+    top: -60px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SP-one .mini { background-color: rgb(0, 179, 59); }
+.SP-two .mini { background-color: rgb(225, 0, 0); }
+.SP-three .mini { background-color: rgb(255, 187, 0); }
+
+.SP-one h3, .SP-two h3, .SP-three h3 {
+    font-size: 30px;
+    margin-top: 70px;
+}
+
+.SP-one h5, .SP-two h5, .SP-three h5 {
+    font-size: 18px;
+}
+
+.SP-four{
+     width: 20%;
+    min-width: 250px;
+    height: 250px;
+    border-radius: 22px;
+    padding: 30px;
+    position: relative;
+    color: white;
+}
+
+.HL h1{
+    width: 100%;
+    font-size: 20px;
+    padding: 0px;
+    line-height: 1.5;
+
+}
+.web{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+  
 
 
-    
+}
+
+.web-one .web-two li{
+   font-weight: 15px;
+  
+
+}
+.footer-part{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.footer-part .part-one img{
+    width: 60px;
+    padding-inline: 10px;
+
+}
+.footer-part .part-two img{
+   width: 60px;
+    padding-inline: 10px;
+
+}
+.FH h1{
+    font-size: 30px;
+
+}
+.last h1{
+    font-size: 15px;
+}
+
+}
 
     
